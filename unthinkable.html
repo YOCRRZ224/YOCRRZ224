@@ -15,9 +15,8 @@
 
 
 	body {
-		background: url("/storage/A8AB-1801/awesome images/Screenshot_20250113-130246.png");
+		background: url("https://lh3.google.com/u/0/d/1BS6nqKlcDQydi-vGRVyNS-TFzli3gbPG=w419-h314-p-k-nu-iv1");
 	font-family: "TheAlphaDayGrungeDemo-6Ym6M", sans-serif;
-		background: cover;
 	}
 
 	.navigation {}
@@ -299,7 +298,47 @@ border-radius: 10px;
 	width: 100px;
 	margin-bottom: 100px;
 	border: 2px solid white;
+}https://hd.wallpaperswide.com/thumbs/outstanding_view_2-t2.jpg
+#cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: rgba( 141, 247, 204, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6.5px );
+-webkit-backdrop-filter: blur( 6.5px );
+clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  opacity: 0.8;
+  pointer-events: none; /* Don't interfere with mouse clicks */
+  transform: translate(-50%, -50%); /* Centers the element */
+  transition: transform 0.2s ease-in-out; /* Smooth transition */
+  z-index: 100;  /* Ensure cursor appears on top */
+  display: none; /* Initially hide the cursor*/
+
 }
+/* Added style for a trail effect */
+#cursor-trail {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 123, 255, 0.2); /* Semi-transparent trail */
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  transition: opacity 0.2s;
+  animation: trailFade 1s ease-in-out infinite;
+  display: none;
+
+}
+
+@keyframes trailFade {
+    0% { opacity: 1; }
+    100% { opacity: 2; }
+  }
+
 </style>
 
 <body>
@@ -421,9 +460,10 @@ border-radius: 10px;
 	</div>
 	</div>
 	
-
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
 </body>
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript" charset="utf-8ww">
 	const dynamicText = document.querySelector("h1 span");
 	const words = ["Aditya", "A Programmer", "A learner", "A freelancer"];
 
@@ -480,4 +520,23 @@ border-radius: 10px;
     }
   }, { once: true });
 });
+
+const cursor = document.getElementById('cursor');
+const cursorTrail = document.getElementById('cursor-trail');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  cursor.style.display = 'block'; //Show the cursor
+
+  cursorTrail.style.left = e.clientX + 'px';
+  cursorTrail.style.top = e.clientY + 'px';
+  cursorTrail.style.display = 'block'; //Show the cursor trail
+});
+
+document.addEventListener('mouseout', () => {
+  cursor.style.display = 'none';
+  cursorTrail.style.display = 'none';
+});
+
 </script>
