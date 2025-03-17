@@ -6,14 +6,50 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
-
-<style type="text/css" media="all">
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+<body>
+<style>
+form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+textarea {
+  height: 150px;
+}
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.error {
+  color: red;
+  margin-top: 5px;
+}
 
 body {
-background: url("https://backiee.com/wallpaper/blue-fantasy-minimal-landscape/120438");
+background: url("");
 font-family: "kanit", sans-serif;
 	}
 
@@ -464,6 +500,29 @@ z-index: 99;
 
 <div id="cursor"></div>
 <div id="cursor-trail"></div>
+
+<hr />
+
+<h1>Contact Us</h1>
+
+<form id="contactForm" action="submit.php" method="post">  <!--  submit.php needs to be created on your server -->
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <div id="nameError" class="error"></div>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <div id="emailError" class="error"></div>
+
+  <label for="subject">Subject:</label>
+  <input type="text" id="subject" name="subject">
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+  <div id="messageError" class="error"></div>
+
+  <button type="submit">Send</button>
+</form>
 </body>
 <script type="text/javascript" charset="utf-8ww">
 const dynamicText = document.querySelector("h1 span");
@@ -547,4 +606,39 @@ cursor.style.display = 'none';
 cursorTrail.style.display = 'none';
 });
 
+</script>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    // Basic client-side validation (you'll likely want more robust validation)
+    let isValid = true;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name.trim() === "") {
+      document.getElementById('nameError').textContent = "DONT YOU WANNA RIGHT YOUR NAME EHHH!";
+      isValid = false;
+    } else {
+      document.getElementById('nameError').textContent = "";
+    }
+
+    if (email.trim() === "" || !email.includes('@')) {
+      document.getElementById('emailError').textContent = "JUST PUT YOU VALID EMAIL MAN!";
+      isValid = false;
+    } else {
+      document.getElementById('emailError').textContent = "";
+    }
+
+    if (message.trim() === "") {
+      document.getElementById('messageError').textContent = "HELL NAH MAN!";
+      isValid = false;
+    } else {
+      document.getElementById('messageError').textContent = "";
+    }
+
+    if (!isValid) {
+      event.preventDefault(); // Prevent form submission if invalid
+    }
+  });
 </script>
