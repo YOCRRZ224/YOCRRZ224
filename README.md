@@ -39,3 +39,4 @@
 
 <p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=yocrrz&" alt="yocrrz" /></p>
 
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=YOCRRZ)](https://github.com/anuraghazra/github-readme-stats)
