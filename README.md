@@ -33,7 +33,7 @@
   <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a>
 </p>
 
-<p align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=yocrrz&show_icons=true&locale=en&layout=compact" alt="yocrrz" /></p>
+<p align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=yocrrz224&show_icons=true&locale=en&layout=compact" alt="yocrrz" /></p>
 
 <p align="center"><img src="https://github-readme-stats.vercel.app/api?username=yocrrz&show_icons=true&locale=en" alt="yocrrz" /></p>
 
