@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm passionate about Linux OS and have a keen interest in motorsports, including F1, Le Mans, DTM, and Nurburgring. I'm also a web developer and C++ developer with experience in MongoDB and Node.js. Currently, I'm learning ethical hacking, and I'm also a music lover, car enthusiast, and tech enthusiast.
+I'm passionate about Linux OS and have a keen interest in motorsports, including F1, Le Mans, DTM, and Nurburgring. I'm also a web developer and C++ developer with experience in MongoDB and Node.js. Currently, I'm learning ethical hacking, and I'm also a music lover, car enthusiast, and tech enthusiast.I have created advance pentesting,recons,red hat group tools i am in advance network systems or nmap.
 
 
 ## 🌐 Socials:
