@@ -1,2 +1,423 @@
-<h1>PORTOFOLIO COMING VERY SOON EXPECTED ON TOMMOROW</h1>
-<h2>UNDER MAINTENANCE</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YOCRRZ | Terminal Dev & Kernel Enthusiast</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of YOCRRZ  Terminal-based developer, Linux lover, and open-source explorer.">
+  <meta name="keywords" content="YOCRRZ, Linux, Developer, Terminal, Bash, C++, Kernel, AERO-V10, Portfolio">
+  <meta name="author" content="YOCRRZ">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="YOCRRZ | Terminal Dev Portfolio">
+  <meta property="og:description" content="Explore projects like AERO-V10 and terminal-based ecosystems built by YOCRRZ.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/YOCRRZ224/YOCRRZ224/refs/heads/main/IMG-20250725-WA0007.jpg">
+  <meta property="og:url" content="https://YOCRRZ.github.io">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YOCRRZ Portfolio">
+  <meta name="twitter:description" content="Linux Dev. Terminal Enthusiast. I live in Ring 0.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/YOCRRZ224/YOCRRZ224/refs/heads/main/IMG-20250725-WA0007.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://YOCRRZ.github.io" />
+
+  <link rel="icon" href="https://fav.farm/" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+      <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: rgba(255, 255, 255, 0.05);
+      --text: #ffffff;
+      --highlight: #8be9fd;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: var(--highlight);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 4px;
+      transition: var(--transition);
+    }
+    nav ul li a:hover {
+      color: var(--highlight);
+    }
+
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-icon div {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.4s;
+      border-radius: 3px;
+    }
+
+    .menu-icon.open .bar1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.open .bar2 {
+      opacity: 0;
+    }
+
+    .menu-icon.open .bar3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .nav-mobile a {
+      margin: 10px 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding-top: 70px;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--highlight);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-attachment: fixed;
+      flex-direction: column;
+      color: white;
+    }
+
+    #typewriter {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: var(--highlight);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 1rem auto;
+      max-width: 500px;
+      border: 1px solid gray;
+      transition: .4s;
+    }
+    .card:hover{
+    	border: 1px solid #8be9fd;
+    	box-shadow: 2px 2px 2px #8be9fd;
+    }
+	.card p a{
+		text-decoration: none;
+		padding: 4px;
+		color: gray;
+		transition: .4s;
+	}
+	.card p a:hover{
+		 color: var(--highlight);
+	}
+	#img{
+		border: 1px solid gray;
+		transition: .4s;
+	}
+	#img:hover{
+		border:1px solid #8be9fd;
+	}
+    .skills-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .skill {
+      text-align: left;
+    }
+
+    .skill label {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .progress {
+      width: 100%;
+      background: #222;
+      height: 8px;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: gray;
+      transition: .4s;
+    }
+    .progress-fill:hover{
+    	background: var(--highlight);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #111;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .nav-mobile.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">YOCRRZ</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#social">Social</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="nav-mobile" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#social">Social</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>YOCRRZ</h1>
+      <p id="typewriter"></p>
+    </section>
+
+    <section id="about" data-aos="fade-up">
+      <h2 class="section-title">About Me</h2>
+      <p>I'm passionate about Linux OS and have a keen interest in motorsports, including F1, Le Mans, DTM, and Nurburgring. I'm also a web developer and C++ developer with experience in MongoDB and Node.js. Currently, I'm learning ethical hacking, and I'm also a music lover, car enthusiast, and tech enthusiast.I have created advance pentesting,recons,red hat group tools i am in advance network systems or nmap.</p>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-bar">
+        <div class="skill">
+          <label>Linux/Bash</label>
+          <div class="progress"><div class="progress-fill" style="width: 95%;"></div></div>
+        </div>
+        <div class="skill">
+          <label>Python</label>
+          <div class="progress"><div class="progress-fill" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+          <label>Javascript</label>
+          <div class="progress"><div class="progress-fill" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+          <label>Web Dev</label>
+          <div class="progress"><div class="progress-fill" style="width: 95%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2 class="section-title">Projects</h2>
+      <div class="card">
+        <h3>AERO-V10 Chat</h3>
+        <p>Terminal-based chat app with bots, plugins, roles, music, and more.</p>
+        <p><a href="https://github.com/YOCRRZ224/AERO-V10-terminal-chat">See it</a></p>
+      </div>
+      <div class="card">
+        <h3>GLASS-BRIDGE</h3>
+        <p>A project that focuses on speed,effeciency and asthetics.It is a file transfer app with multiple functionalities</p>
+        <p><a href="https://github.com/YOCRRZ224/Glass-Bridge">See it</a></p>
+      </div>
+      <div class="card">
+        <h3>VOID OS</h3>
+        <p>A project that have terminal utilities but having the access key it will have untraceable pentesting & recons tools only for educational purpose -(A reason why this is not public)</p>
+      </div>
+      <div class="card">
+        <h3>And Many More But Private</h3>
+      </div>
+    </section>
+
+    <section id="social" data-aos="fade-up">
+      <h2 class="section-title">Social</h2>
+      <div class="card">
+        <img src="https://avatars.githubusercontent.com/u/137055000?v=4" alt="YOCRRZ" style="width: 100px; border-radius: 50%;" id="img"/>
+        <p>Limits are for machines, not for me</p>
+        <p>@YOCRRZ</p>
+        <p><a href="https://reddit.com/user/Total-Rutabaga-8512"><i class="ph ph-reddit-logo"></i></a><a href="mailto:adityaraj116111209@gmail.com"><i class="ph ph-envelope"></i></a><a href="https://github.com/yocrrz224"><i class="ph ph-github-logo"></i></a><a href="https://cobbic.com/u/yocrrz">C</a></p>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="card">
+        <p>Contact with me <a href="mailto:adityaraj116111209@gmail.com">Gmail</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>I live inside terminal as kernel ring 0</p>
+    <p></p> YOCRRZ</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const phrases = ["Terminal Warrior", "Linux & Python Enthusiast", "Recons Creator"];
+    let i = 0, j = 0, current = '', isDeleting = false;
+
+    function typeEffect() {
+      if (i < phrases.length) {
+        const fullText = phrases[i];
+
+        if (isDeleting) {
+          current = fullText.substring(0, j--);
+        } else {
+          current = fullText.substring(0, j++);
+        }
+
+        document.getElementById("typewriter").innerHTML = current + '|';
+
+        let delay = isDeleting ? 60 : 100;
+
+        if (!isDeleting && current === fullText) {
+          delay = 1500;
+          isDeleting = true;
+        } else if (isDeleting && current === '') {
+          isDeleting = false;
+          i++;
+          delay = 500;
+        }
+
+        setTimeout(typeEffect, delay);
+      } else {
+        i = 0;
+        typeEffect();
+      }
+    }
+
+    typeEffect();
+
+    function toggleMenu(icon) {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("active");
+      icon.classList.toggle("open");
+
+      if (menu.classList.contains("active")) {
+        document.addEventListener("click", outsideMenuHandler);
+      } else {
+        document.removeEventListener("click", outsideMenuHandler);
+      }
+    }
+
+    function outsideMenuHandler(e) {
+      const menu = document.getElementById("mobileMenu");
+      const icon = document.querySelector(".menu-icon");
+
+      if (!menu.contains(e.target) && !icon.contains(e.target)) {
+        menu.classList.remove("active");
+        icon.classList.remove("open");
+        document.removeEventListener("click", outsideMenuHandler);
+      }
+    }
+  </script>
+</body>
+  </html>
+  
