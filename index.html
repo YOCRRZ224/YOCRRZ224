@@ -57,15 +57,19 @@
     }
 
     body {
-       background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1b2735);
+       /* Dark + cyan animated background */
+background: linear-gradient(135deg, #000000, #050505, #0a0a0a, #001f2d);
 background-size: 400% 400%;
-animation: bgShift 12s ease infinite;
+animation: bgMove 10s ease infinite;
 
+/* Cyan glowing border effect */
+box-shadow: 0 0 15px #00ffff, inset 0 0 15px #00ffff;
+border: 2px solid #00ffff;
 
       color: var(--text);
       font-family: 'Orbitron', sans-serif;
     }
-@keyframes bgShift {
+@keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
