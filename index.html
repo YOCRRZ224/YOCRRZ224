@@ -56,24 +56,7 @@
       scroll-behavior: smooth;
     }
 
-    body {
-       /* Dark + cyan animated background */
-background: linear-gradient(135deg, #000000, #050505, #0a0a0a, #001f2d);
-background-size: 400% 400%;
-animation: bgMove 10s ease infinite;
 
-/* Cyan glowing border effect */
-box-shadow: 0 0 15px #00ffff, inset 0 0 15px #00ffff;
-border: 2px solid #00ffff;
-
-      color: var(--text);
-      font-family: 'Orbitron', sans-serif;
-    }
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
     header {
       position: fixed;
       width: 100%;
@@ -144,7 +127,9 @@ border: 2px solid #00ffff;
       flex-direction: column;
       position: absolute;
       top: 60px;
-      background:var(--bg);
+            background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px) saturate(200%);
+    -webkit-backdrop-filter: blur(12px) saturate(200%);
       right: 20px;
       padding: 15px;
       border-radius: 10px;
@@ -184,10 +169,16 @@ border: 2px solid #00ffff;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url("https://raw.githubusercontent.com/YOCRRZ224/YOCRRZ224/main/mountain.jpg") no-repeat center/cover;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px) saturate(200%);
+    -webkit-backdrop-filter: blur(12px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.25);
       background-attachment: fixed;
       flex-direction: column;
       color: white;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              margin: 3px 3px 3px 3px;
     }
 
     #typewriter {
@@ -198,19 +189,19 @@ border: 2px solid #00ffff;
 
     .card {
       background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(15px) saturate(200%);
-    -webkit-backdrop-filter: blur(15px) saturate(200%);
+      backdrop-filter: blur(4px) saturate(200%);
+    -webkit-backdrop-filter: blur(12px) saturate(200%);
     background-color: rgba(17, 25, 40, 0.25);
       padding: 1.5rem;
       border-radius: 12px;
       margin: 1rem auto;
       max-width: 500px;
-      border: 1px solid gray;
+            border: 1px solid rgba(255, 255, 255, 0.2);
       transition: .4s;
     }
     .card:hover{
-    	border: 1px solid #2BA5FF;
-    	box-shadow: 2px 2px 2px #2BA5FF;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+    	box-shadow: 2px 2px 2px rgba(0, 255, 255, 0.2);
     	transform: scale(1.05);
     	border-radius: 18px;
     }
@@ -229,7 +220,7 @@ border: 2px solid #00ffff;
 		transition: .4s;
 	}
 	#img:hover{
-		border:1px solid #2BA5FF;
+		border: 1px solid rgba(255, 255, 255, 0.2);
 	}
     .skills-bar {
       display: flex;
@@ -263,7 +254,7 @@ border: 2px solid #00ffff;
       transition: .4s;
     }
     .progress-fill:hover{
-    	background: var(--highlight);
+    background: var(--highlight);
     	border-radius: 8px;
     }
 
@@ -301,7 +292,7 @@ border: 2px solid #00ffff;
         transition: .4s;
     }
     .card .graph:hover{
-        border: 1px solid #2BA5FF;
+        border: 1px solid rgba(255, 255, 255, 0.2);
         transform: scale(1.05);
         border-radius: 18px;
         top: 9px;
@@ -314,9 +305,31 @@ border: 2px solid #00ffff;
         margin: 2px 2px 1px 2px;
         border-radius: 8px;
     }
+        body {
+      margin: 0;
+      min-height: 200vh;
+      background: linear-gradient(135deg, #000, #010a0f, #001f2d);
+      font-family: Orbitron, sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Canvas stays fixed as moving particle layer */
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      display: block;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
+      <canvas id="bg"></canvas>
+
   <header>
     <div class="logo">YOCRRZ</div>
     <nav>
@@ -559,5 +572,211 @@ border: 2px solid #00ffff;
       }
     }
   </script>
+<script>
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+let stars = [];
+let w, h;
+const PARTICLE_COUNT = 200;
+let scrollPulse = 0; // intensity multiplier for pulse
+let starTimer = 0;
+
+function resize() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+// --- Particle Class ---
+class Particle {
+  constructor() {
+    this.reset();
+  }
+
+  reset() {
+    this.x = Math.random() * w;
+    this.y = Math.random() * h;
+    this.radius = Math.random() * 2 + 1.5;
+    this.speedX = (Math.random() - 0.5) * 0.4;
+    this.speedY = (Math.random() - 0.5) * 0.4;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > w) this.speedX *= -1;
+    if (this.y < 0 || this.y > h) this.speedY *= -1;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(0,255,255,${0.9 + scrollPulse*0.3})`; // pulse effect
+    ctx.fill();
+  }
+}
+
+// --- Shooting Star Class ---
+class ShootingStar {
+  constructor() { this.reset(); }
+
+  reset() {
+    this.x = Math.random()*w;
+    this.y = Math.random()*h*0.5;
+    this.length = Math.random()*80 + 50;
+    this.speed = Math.random()*6 + 4;
+    this.angle = Math.PI/4;
+    this.opacity = 1;
+  }
+
+  update() {
+    this.x += this.speed * Math.cos(this.angle);
+    this.y += this.speed * Math.sin(this.angle);
+    this.opacity -= 0.02;
+    if(this.opacity <= 0 || this.x>w || this.y>h) this.reset();
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.strokeStyle = `rgba(0,255,255,${this.opacity})`;
+    ctx.lineWidth = 2;
+    ctx.moveTo(this.x, this.y);
+    ctx.lineTo(
+      this.x - this.length * Math.cos(this.angle),
+      this.reset();
+  }
+
+  reset() {
+    this.x = Math.random() * w;
+    this.y = Math.random() * h;
+    this.radius = Math.random() * 2 + 1.5;
+    this.speedX = (Math.random() - 0.5) * 0.4;
+    this.speedY = (Math.random() - 0.5) * 0.4;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > w) this.speedX *= -1;
+    if (this.y < 0 || this.y > h) this.speedY *= -1;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(0,255,255,${0.9 + scrollPulse*0.3})`; // pulse effect
+    ctx.fill();
+  }
+}
+
+// --- Shooting Star Class ---
+class ShootingStar {
+  constructor() { this.reset(); }
+
+  reset() {
+    this.x = Math.random()*w;
+    this.y = Math.random()*h*0.5;
+    this.length = Math.random()*80 + 50;
+    this.speed = Math.random()*6 + 4;
+    this.angle = Math.PI/4;
+    this.opacity = 1;
+  }
+
+  update() {
+    this.x += this.speed * Math.cos(this.angle);
+    this.y += this.speed * Math.sin(this.angle);
+    this.opacity -= 0.02;
+    if(this.opacity <= 0 || this.x>w || this.y>h) this.reset();
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.strokeStyle = `rgba(0,255,255,${this.opacity})`;
+    ctx.lineWidth = 2;
+    ctx.moveTo(this.x, this.y);
+    ctx.lineTo(
+      this.x - this.length * Math.cos(this.angle),
+      this.y - this.length * Math.sin(this.angle)
+    );
+    ctx.stroke();
+  }
+}
+
+// --- Connect particles ---
+function connectParticles() {
+  const centerX = w/2;
+  const centerY = h/2;
+
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      let dx = particles[i].x - particles[j].x;
+      let dy = particles[i].y - particles[j].y;
+      let dist = Math.sqrt(dx*dx + dy*dy);
+
+      if (dist < 60 && Math.random() < 0.35) {
+        let distToCenter = Math.sqrt(
+          Math.pow((particles[i].x+particles[j].x)/2 - centerX,2) +
+          Math.pow((particles[i].y+particles[j].y)/2 - centerY,2)
+        );
+        let maxDist = Math.sqrt(centerX*centerX + centerY*centerY);
+        let depthFade = 1 - distToCenter/maxDist;
+
+        ctx.strokeStyle = `rgba(0,255,255,${(1 - dist/60)*0.6*depthFade + scrollPulse*0.3})`;
+        ctx.lineWidth = 0.15; // super thin
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+}
+
+// --- Init ---
+function init() {
+  particles = [];
+  for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
+
+  stars = [];
+}
+
+// --- Scroll pulse ---
+let isScrolling;
+window.addEventListener('scroll', function(){
+  scrollPulse = 1;
+  clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => { scrollPulse = 0; }, 100); // fade back
+});
+
+// --- Animate loop ---
+function animate() {
+  // Trails for subtle motion
+  ctx.fillStyle = "rgba(0,0,0,0.04)"; // lighter for sharper effect
+  ctx.fillRect(0, 0, w, h);
+
+  // Update & draw particles
+  for (let p of particles) { p.update(); p.draw(); }
+
+  // Connect lines
+  connectParticles();
+
+  // Shooting stars logic (max 2)
+  starTimer += 1;
+  if(starTimer > 200) {
+    if(stars.length < 2) stars.push(new ShootingStar());
+    starTimer = 0;
+  }
+  for(let s of stars) { s.update(); s.draw(); }
+
+  requestAnimationFrame(animate);
+}
+
+init();
+animate();
+</script>
 </body>
 	  </html>
+	  
