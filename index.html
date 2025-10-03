@@ -748,6 +748,15 @@ animate();
   gtag('js', new Date());
 
   gtag('config', 'G-XNTCQ6VWJE');
+
+  // Example: Track button clicks
+  document.getElementById("bg").addEventListener("click", function() {
+    gtag('event', 'button_click', {
+      'event_category': 'engagement',
+      'event_label': 'Signup Button',
+      'value': 1
+    });
+  });
 </script>
 </body>
 	  </html>
