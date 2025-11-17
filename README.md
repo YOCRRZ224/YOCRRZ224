@@ -1,3 +1,11 @@
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00ffaa&height=130&section=header" />
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Monospace&size=30&duration=4000&pause=800&color=00ffaa&center=true&vCenter=true&width=800&lines=YOCRRZ+HERE!+;+Developer+%7C+Pentester+%7C+Creator;Always+Building+Something+New" />
+</p>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&size=28&duration=3500&pause=800&color=00ffaa&center=true&vCenter=true&width=900&lines=Initializing+YOCRRZ+System...;Loading+Modules...;Boot+Complete." />
+</p>
+
 # 💫 About Me:
 I'm passionate about Linux OS and have a keen interest in motorsports, including F1, Le Mans, DTM, and Nurburgring. I'm also a web developer and C++ developer with experience in MongoDB and Node.js. Currently, I'm learning ethical hacking, and I'm also a music lover, car enthusiast, and tech enthusiast.I have created advance pentesting,recons,red hat group tools i am in advance network systems or nmap.
 
@@ -23,7 +31,10 @@ I'm passionate about Linux OS and have a keen interest in motorsports, including
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=YOCRRZ224&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
+<img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00ffaa&height=120&section=footer" />
 ---
-[![](https://visitcount.itsvg.in/api?id=YOCRRZ224&icon=6&color=7)](https://visitcount.itsvg.in)
+
+
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
