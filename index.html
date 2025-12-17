@@ -767,5 +767,117 @@ animate();
   });
 });
 </script>
+<script>
+/* ===============================
+   ADVANCED USER INTERACTION TRACKING
+   =============================== */
+
+window.dataLayer = window.dataLayer || [];
+
+// helper
+function track(event, params = {}) {
+  dataLayer.push({
+    event,
+    ...params
+  });
+}
+
+/* ---------- TOUCH EVENTS ---------- */
+let touchCount = 0;
+
+document.addEventListener("touchstart", e => {
+  touchCount++;
+  track("touch_start", {
+    touches: e.touches.length,
+    total_touches: touchCount
+  });
+}, { passive: true });
+
+document.addEventListener("touchmove", () => {
+  track("touch_move");
+}, { passive: true });
+
+document.addEventListener("touchend", () => {
+  track("touch_end");
+});
+
+/* ---------- RAGE TAPS (FAST MULTI-TAPS) ---------- */
+let tapTimes = [];
+
+document.addEventListener("click", e => {
+  const now = Date.now();
+  tapTimes.push(now);
+  tapTimes = tapTimes.filter(t => now - t < 800);
+
+  if (tapTimes.length >= 4) {
+    track("rage_click", {
+      target: e.target.tagName
+    });
+    tapTimes = [];
+  }
+});
+
+/* ---------- SCROLL DEPTH ---------- */
+let scrollTracked = new Set();
+
+window.addEventListener("scroll", () => {
+  const depth = Math.floor(
+    (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100
+  );
+
+  [25, 50, 75, 100].forEach(p => {
+    if (depth >= p && !scrollTracked.has(p)) {
+      scrollTracked.add(p);
+      track("scroll_depth", { percent: p });
+    }
+  });
+}, { passive: true });
+
+/* ---------- LONG PRESS ---------- */
+let pressTimer;
+
+document.addEventListener("mousedown", e => {
+  pressTimer = setTimeout(() => {
+    track("long_press", {
+      element: e.target.tagName
+    });
+  }, 600);
+});
+
+document.addEventListener("mouseup", () => clearTimeout(pressTimer));
+document.addEventListener("touchend", () => clearTimeout(pressTimer));
+
+/* ---------- HOVER INTENT ---------- */
+document.querySelectorAll(".card, a, button").forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    track("hover_intent", {
+      element: el.tagName
+    });
+  });
+});
+
+/* ---------- TIME ON PAGE ---------- */
+let pageStart = Date.now();
+
+window.addEventListener("beforeunload", () => {
+  const timeSpent = Math.round((Date.now() - pageStart) / 1000);
+  track("time_on_page", { seconds: timeSpent });
+});
+
+/* ---------- VISIBILITY CHANGE ---------- */
+document.addEventListener("visibilitychange", () => {
+  track("tab_visibility", {
+    state: document.visibilityState
+  });
+});
+
+/* ---------- DEVICE SIGNALS ---------- */
+track("device_info", {
+  device_memory: navigator.deviceMemory || "unknown",
+  cores: navigator.hardwareConcurrency || "unknown",
+  screen: `${screen.width}x${screen.height}`,
+  touch_capable: "ontouchstart" in window
+});
+</script>
 </body>
 	  </html>
