@@ -1,6 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNTCQ6VWJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XNTCQ6VWJE', {
+    anonymize_ip: true
+  });
+</script>
+  <script>
+  // ----- GA4 INTERACTION TRACKER -----
+  (function(){
+    // click tracking
+    document.addEventListener('click', function(e){
+      let label = e.target.tagName + (e.target.id ? '#' + e.target.id : '');
+      gtag('event', 'click', {
+        'event_category': 'interaction',
+        'event_label': label,
+        'value': 1
+      });
+    });
+
+    // hover tracking (lightweight)
+    document.addEventListener('mouseover', function(e){
+      let label = e.target.tagName + (e.target.id ? '#' + e.target.id : '');
+      gtag('event', 'hover', {
+        'event_category': 'interaction',
+        'event_label': label
+      });
+    });
+
+    // scroll tracking
+    let firedScrolls = [];
+    let firstScrollFired = false;
+    const scrollPoints = [25,50,75,100]; // percent scroll points
+
+    window.addEventListener('scroll', function(){
+      const scrollPercent = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+
+      // first scroll (200px)
+      if(!firstScrollFired && window.scrollY > 200){
+        gtag('event', 'first_scroll', {
+          'event_category': 'interaction',
+          'event_label': 'Scrolled 200px',
+          'value': window.scrollY
+        });
+        firstScrollFired = true;
+      }
+
+      // depth tracking
+      scrollPoints.forEach(p=>{
+        if(scrollPercent >= p && !firedScrolls.includes(p)){
+          gtag('event', 'scroll_depth', {
+            'event_category': 'interaction',
+            'event_label': p + '% scrolled'
+          });
+          firedScrolls.push(p);
+        }
+      });
+    });
+
+    // specific interactive elements (3D torus, gallery items)
+    const trackElements = [
+      '#three-container',
+      '.gallery-item'
+    ];
+    trackElements.forEach(selector=>{
+      document.querySelectorAll(selector).forEach(el=>{
+        el.addEventListener('mouseenter', function(){
+          gtag('event', 'interaction_hover', {
+            'event_category': 'special_element',
+            'event_label': selector
+          });
+        });
+        el.addEventListener('click', function(){
+          gtag('event', 'interaction_click', {
+            'event_category': 'special_element',
+            'event_label': selector
+          });
+        });
+      });
+    });
+
+  })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="description" content="YOCRRZ — terminal-first developer portfolio focused on systems, UI, motion, and experimental web engineering.">
   <link rel="icon" type="image/svg+xml" href="https://4mzypffegb.ucarecd.net/16356f75-7691-4cc0-adb1-dc9292299230/">
