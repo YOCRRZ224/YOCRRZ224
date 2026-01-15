@@ -59,6 +59,7 @@
 
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=YOCRRZ224&limit=5&theme=dark&combine_all_yearly_contributions=true)
+[![YOCRRZ224's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=YOCRRZ224&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" />
 <img src="https://capsule-render.vercel.app/api?type=waving&color=00ffaa&height=120&section=footer" />
