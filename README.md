@@ -8,7 +8,7 @@
 
 # ⚡ Portfolio
 <div align="center">
-  <a href="https://yocrrz224.github.io/YOCRRZ224/" target="_blank">
+  <a href="https://yocrrz.is-a.dev" target="_blank">
     <img src="https://img.shields.io/badge/Open_Portfolio-ffffff?style=for-the-badge&logo=windowsterminal&logoColor=000" />
   </a>
 </div>
