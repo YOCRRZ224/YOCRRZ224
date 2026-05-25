@@ -6,17 +6,17 @@
   <img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&size=28&duration=3500&pause=800&color=00ffaa&center=true&vCenter=true&width=900&lines=Initializing+YOCRRZ+System...;Loading+Modules...;Boot+Complete." />
 </p>
 
-# ⚡ Portfolio
+# Portfolio
 <div align="center">
   <a href="https://yocrrz.is-a.dev" target="_blank">
     <img src="https://img.shields.io/badge/Open_Portfolio-ffffff?style=for-the-badge&logo=windowsterminal&logoColor=000" />
   </a>
 </div>
 
-## 🌐 Socials:
+##  Socials:
 [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/Yocrrz) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/Total-Rutabaga-8512) [![Codepen](https://img.shields.io/badge/Codepen-000000?logo=codepen&logoColor=white)](https://codepen.io/_-_LEGEND-ADITYA_-_) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:adityaraj116111209@gmail.com) 
 
-# 🛠 Tech Arsenal
+#  Tech Stack
 <div align="center">
 
 <!-- Row 1 -->
@@ -46,18 +46,18 @@
 
 </div>
 
-# 📊 GitHub Stats:
+# GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=YOCRRZ224&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=YOCRRZ224&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=YOCRRZ224&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-## 🏆 GitHub Trophies
+## GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=YOCRRZ224&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
-### ✍️ Random Dev Quote
+### Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
 
-### 🔝 Top Contributed Repo
+### Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=YOCRRZ224&limit=5&theme=dark&combine_all_yearly_contributions=true)
 [![YOCRRZ224's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=YOCRRZ224&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
