@@ -53,7 +53,8 @@
 
 ## GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=YOCRRZ224&theme=radical&no-frame=false&no-bg=false&margin-w=4)
-
+## Discord
+[![yocrrz224's Discord status](https://dsc-readme.tsuni.dev/api/user/1133013043488505866?theme=tokyoNight&width=448)](https://github.com/the-snesler/discord-github-preview)
 ### Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
 
