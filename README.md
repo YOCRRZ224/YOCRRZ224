@@ -3,7 +3,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Monospace&size=30&duration=4000&pause=800&color=00ffaa&center=true&vCenter=true&width=800&lines=YOCRRZ+HERE!+;+Developer+%7C+Pentester+%7C+Creator;Always+Building+Something+New" />
 </p>
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&size=28&duration=3500&pause=800&color=00ffaa&center=true&vCenter=true&width=900&lines=Initializing+YOCRRZ+System...;Loading+Modules...;Boot+Complete." />
+  <img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&size=28&duration=3500&pause=800&color=00ffaa&center=true&vCenter=true&width=900&lines=whoami?;+nerd;" />
 </p>
 
 # Portfolio
@@ -54,10 +54,7 @@
 ## GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=YOCRRZ224&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 ## Discord
-[![yocrrz224's Discord status](https://dsc-readme.tsuni.dev/api/user/1133013043488505866?theme=tokyoNight&width=448)](https://discord.gg/yocrrz224)
-### Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
-
+[![yocrrz224's Discord status](https://dsc-readme.tsuni.dev/api/user/1133013043488505866?theme=tokyoNight&width=448)](https://yocrrz.is-a.dev)
 ### Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=YOCRRZ224&limit=5&theme=dark&combine_all_yearly_contributions=true)
 [![YOCRRZ224's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=YOCRRZ224&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
