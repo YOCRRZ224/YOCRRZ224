@@ -14,7 +14,7 @@
 </div>
 
 ##  Socials:
-[![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/Yocrrz) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/Total-Rutabaga-8512) [![Codepen](https://img.shields.io/badge/Codepen-000000?logo=codepen&logoColor=white)](https://codepen.io/_-_LEGEND-ADITYA_-_) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:adityaraj116111209@gmail.com) 
+[![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/Yocrrz) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/Total-Rutabaga-8512) [![Codepen](https://img.shields.io/badge/Codepen-000000?logo=codepen&logoColor=white)](https://codepen.io/_-_LEGEND-ADITYA_-_) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:yocrrz@yocrrz.is-a.dev) 
 
 #  Tech Stack
 <div align="center">
@@ -47,7 +47,7 @@
 </div>
 
 # GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=YOCRRZ224&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://github-readme-stats.vercel.app/api?username=YOCRRZ224&theme=dark&hide_border=false&include_all_commits=True&count_private=false)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=YOCRRZ224&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=YOCRRZ224&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
