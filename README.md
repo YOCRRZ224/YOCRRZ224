@@ -54,7 +54,7 @@
 ## GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=YOCRRZ224&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 ## Discord
-[![yocrrz224's Discord status](https://dsc-readme.tsuni.dev/api/user/1133013043488505866?theme=tokyoNight&width=448)](https://discord.com/users/1133013043488505866)
+[![yocrrz's Discord status](https://dsc-readme.tsuni.dev/api/user/1133013043488505866?banner=https%3A%2F%2Fi.pinimg.com%2F736x%2F8f%2F83%2F55%2F8f8355ab23f75c8b46fa0ada575c479e.jpg&hideSpotify=true&theme=tokyoNight&width=560&font=modern&effect=pop&nameColor1=3b82f6)](https://discord.com/users/1133013043488505866)
 ### Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=YOCRRZ224&limit=5&theme=dark&combine_all_yearly_contributions=true)
 [![YOCRRZ224's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=YOCRRZ224&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
