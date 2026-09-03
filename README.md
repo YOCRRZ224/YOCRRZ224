@@ -12,9 +12,8 @@
     <img src="https://img.shields.io/badge/Open_Portfolio-ffffff?style=for-the-badge&logo=windowsterminal&logoColor=000" />
   </a>
 </div>
-
-##  Socials:
-[![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/Yocrrz) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/Total-Rutabaga-8512) [![Codepen](https://img.shields.io/badge/Codepen-000000?logo=codepen&logoColor=white)](https://codepen.io/_-_LEGEND-ADITYA_-_) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:yocrrz@yocrrz.is-a.dev) 
+# Mail
+[email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:yocrrz@yocrrz.is-a.dev) 
 
 #  Tech Stack
 <div align="center">
