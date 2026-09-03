@@ -12,7 +12,9 @@
     <img src="https://img.shields.io/badge/Open_Portfolio-ffffff?style=for-the-badge&logo=windowsterminal&logoColor=000" />
   </a>
 </div>
+
 # Mail
+
 [email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:yocrrz@yocrrz.is-a.dev) 
 
 #  Tech Stack
