@@ -47,13 +47,6 @@ hey@yocrrz.is-a.dev
 
 </div>
 
-# GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=YOCRRZ224&theme=dark&hide_border=false&include_all_commits=True&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=YOCRRZ224&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=YOCRRZ224&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
-
-## GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=YOCRRZ224&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 ## Discord
 [![yocrrz's Discord status](https://dsc-readme.tsuni.dev/api/user/1133013043488505866?banner=https%3A%2F%2Fi.pinimg.com%2F736x%2F8f%2F83%2F55%2F8f8355ab23f75c8b46fa0ada575c479e.jpg&hideSpotify=true&theme=tokyoNight&width=560&font=modern&effect=pop&nameColor1=3b82f6)](https://discord.com/users/1133013043488505866)
 ### Top Contributed Repo
