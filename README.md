@@ -47,13 +47,14 @@ hey@yocrrz.is-a.dev
 
 </div>
 
+## Stats
+[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=YOCRRZ224&rank_icon=github&hide_title=true&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github-stats-extended.vercel.app/api?username=YOCRRZ224&rank_icon=github&hide_title=true&show_icons=true&include_all_commits=true&theme=tokyonight)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=YOCRRZ224&layout=compact&hide_title=true&langs_count=12&theme=tokyonight)](https://github-stats-extended.vercel.app/api/top-langs?username=YOCRRZ224&layout=compact&hide_title=true&langs_count=12&theme=tokyonight)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/pin?username=YOCRRZ224&repo=YOCRRZ224%2FFSX&description_lines_count=1&theme=tokyonight)](https://github.com/YOCRRZ224/FSX)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/pin?username=YOCRRZ224&repo=YOCRRZ224%2FSourfly&description_lines_count=1&theme=tokyonight)](https://github.com/YOCRRZ224/Sourfly)
 ## Discord
 [![yocrrz's Discord status](https://dsc-readme.tsuni.dev/api/user/1133013043488505866?banner=https%3A%2F%2Fi.pinimg.com%2F736x%2F8f%2F83%2F55%2F8f8355ab23f75c8b46fa0ada575c479e.jpg&hideSpotify=true&theme=tokyoNight&width=560&font=modern&effect=pop&nameColor1=3b82f6)](https://discord.com/users/1133013043488505866)
-### Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=YOCRRZ224&limit=5&theme=dark&combine_all_yearly_contributions=true)
-[![YOCRRZ224's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=YOCRRZ224&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
-<img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" />
 <img src="https://capsule-render.vercel.app/api?type=waving&color=00ffaa&height=120&section=footer" />
 ---
 
